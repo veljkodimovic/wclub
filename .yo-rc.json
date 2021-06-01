@@ -1,0 +1,30 @@
+{
+  "generator-ngx-rocket": {
+    "version": "9.2.0",
+    "props": {
+      "appName": "wclub_widgets",
+      "target": [
+        "web"
+      ],
+      "pwa": false,
+      "ui": "bootstrap",
+      "auth": false,
+      "lazy": false,
+      "angulartics": false,
+      "languages": [
+        "en-US"
+      ],
+      "tools": [
+        "prettier",
+        "hads"
+      ],
+      "utility": [],
+      "deploy": "none",
+      "projectName": "wclub-widgets",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": [],
+      "usePrefix": true
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<div style="min-height: 1200px">
+  <div id="chartdiv" style="width: 100%; height: 800px; margin-top: 50px; min-width: 800px"></div>
+  <div class="row h-100">
+    <div style="margin: auto">
+      <div class="d-flex flex-wrap" style="max-width: 1160px; margin-top: 30px; text-align: center">
+        <div *ngFor="let product of products | filterByTaste: keywords; count as c" class="item-details">
+          <div>
+            <div>
+              <div>
+                <a [href]="product.permalink">
+                  <img
+                    width="290"
+                    height="290"
+                    [src]="product.images[0].src"
+                    class="attachment-full size-full wp-post-image"
+                    alt=""
+                    loading="lazy"
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                  />
+                </a>
+              </div>
+              <div class="">
+                <div class="item-category">
+                  <a href="{{ 'https://wclub.rs/product-category/' + product.categories[0].slug + '/' }}" rel="tag"></a>
+                  <a>{{ product.categories[0].name }}</a>
+                </div>
+                <div class="item-title">
+                  <a class="qodef-woo-product-title-link" href="{{ product.permalink }}"> {{ product.name }} </a>
+                </div>
+                <div class="product-price">{{ formatPrice(product.price) | number: '1.2-2' }} RSD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
