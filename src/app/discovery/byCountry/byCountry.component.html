@@ -1,4 +1,4 @@
-<div style="height: 100%;">
+<div style="height: 100%">
   <div id="chartdiv" style="width: 100%; height: 500px; margin-top: 50px"></div>
   <div class="row h-100">
     <div style="margin: auto">
@@ -9,15 +9,15 @@
             <div>
               <div>
                 <a [href]="product.permalink">
-                  <img width="290" height="290" [src]="product.images[0].src"
+                    <img width="290" height="290" [src]="product.images[0].src"
                     class="attachment-full size-full wp-post-image" alt="" loading="lazy"
                     sizes="(max-width: 1200px) 100vw, 1200px" />
                 </a>
               </div>
               <div class="">
                 <div class="item-category">
-                  <a href="{{ 'https://wclub.rs/product-category/' + product.categories[0].slug + '/' }}" rel="tag"></a>
-                  <a>{{ product.categories[0].name }}</a>
+                  <a href="{{ 'https://wclub.rs/product-category/' + product.categories[1].slug + '/' }}" rel="tag"></a>
+                  <a>{{ product.categories[1].name }}</a>
                 </div>
                 <div class="item-title">
                   <a class="qodef-woo-product-title-link" href="{{ product.permalink }}"> {{ product.name }} </a>
@@ -28,8 +28,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
-
 </div>

@@ -5,7 +5,7 @@ import { map, catchError } from 'rxjs/operators';
 var httpOptions: any;
 
 const routes = {
-  products: () => `/products?per_page=100`,
+  products: () => `/products?per_page=100&status=publish&category=175`,
 };
 
 export interface Products {
