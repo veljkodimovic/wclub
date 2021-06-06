@@ -10,6 +10,7 @@ import { FilterByTastePipe } from '../../pipes/filterByTaste.pipe';
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4maps from '@amcharts/amcharts4/maps';
 import am4geodata_worldLow from '@amcharts/amcharts4-geodata/worldLow';
+import { Router } from '@angular/router';
 
 //import * as am4plugins from "@amcharts/amcharts4/plugins/sunburst";
 //import * as d3geo from "d3-geo";
@@ -24,16 +25,21 @@ export class ByCountryComponent implements OnInit {
   isLoading = false;
   keywords: any = [];
   currentCount: any;
+  lang: any = '';
   //private map = am4core.create('chartdiv', am4maps.MapChart);
   chart = am4core.create('chartdiv', am4maps.MapChart);
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
     private zone: NgZone,
     private discoveryService: DiscoveryService,
-  ) { }
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.isLoading = true;
+    if (this.router.url.indexOf('lang=sr') > -1) {
+      this.lang = 'sr/';
+    }
     this.discoveryService
       .getProducts()
       .pipe(
@@ -59,7 +65,6 @@ export class ByCountryComponent implements OnInit {
     // Chart code goes in here
     // am4core.ready(function () {
     this.browserOnly(() => {
-
       //am4core.useTheme(am4themes_animated);
       let keywords: string[] = [];
       this.chart = am4core.create('chartdiv', am4maps.MapChart);

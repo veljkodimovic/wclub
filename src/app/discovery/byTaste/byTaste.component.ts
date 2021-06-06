@@ -12,6 +12,7 @@ import * as am4charts from '@amcharts/amcharts4/charts';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 import * as am4plugins from '@amcharts/amcharts4/plugins/sunburst';
 import { SunburstDataItem } from '@amcharts/amcharts4/plugins/sunburst';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -23,16 +24,20 @@ export class ByTasteComponent implements OnInit {
   isLoading = false;
   keywords: any = [];
   currentCount: any;
+  lang: any = '';
   chart = am4core.create('chartdiv', am4plugins.Sunburst);
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
     private zone: NgZone,
-    private discoveryService: DiscoveryService
-  ) { }
+    private discoveryService: DiscoveryService,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.isLoading = true;
-    //this.createChart();
+    if (this.router.url.indexOf('lang=sr') > -1) {
+      this.lang = 'sr/';
+    }
     this.discoveryService
       .getProducts()
       .pipe(

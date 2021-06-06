@@ -22,9 +22,11 @@
               </div>
               <div class="">
                 <div class="item-category">
-                  <a href="{{ 'https://wclub.rs/product-category/' + product.categories[1].slug + '/' }}" rel="tag">{{
-                    product.categories[1].name
-                  }}</a>
+                  <a
+                    href="{{ 'https://wclub.rs/' + lang + 'product-category/' + product.categories[1].slug + '/' }}"
+                    rel="tag"
+                    >{{ product.categories[1].name }}</a
+                  >
                 </div>
                 <div class="item-title">
                   <a class="qodef-woo-product-title-link" href="{{ product.permalink }}"> {{ product.name }} </a>
