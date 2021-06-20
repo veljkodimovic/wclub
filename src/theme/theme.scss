@@ -3847,6 +3847,7 @@ button.mfp-close:after {
 /* ==========================================================================
    9.0 Swiper carousel styles
    ========================================================================== */
+/*
 .qodef-swiper-container {
   position: relative;
   margin: 0 auto;
@@ -3937,7 +3938,7 @@ body .swiper-container-horizontal > .swiper-pagination-bullets .swiper-paginatio
   margin-left: 7px;
   margin-bottom: 2px;
 }
-
+/*
 .swiper-button-next {
   right: 33px !important;
   -webkit-transform: rotate(180deg);
@@ -3976,6 +3977,15 @@ body .swiper-container-horizontal > .swiper-pagination-bullets .swiper-paginatio
   -webkit-transform: translateX(300%);
   -ms-transform: translateX(300%);
   transform: translateX(300%);
+}*/
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgba(204, 172, 129, 0.35) !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #bc9d72 !important;
 }
 
 /* ==========================================================================

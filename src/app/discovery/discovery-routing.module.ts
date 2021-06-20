@@ -20,4 +20,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [],
 })
-export class DiscoveryRoutingModule { }
+export class DiscoveryRoutingModule {}

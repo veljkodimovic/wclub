@@ -1,0 +1,63 @@
+<div class="row h-100" style="max-width: 1200px; margin: auto">
+  <div class="column left">
+    <h2 class="list-title">Izbor urednika</h2>
+    <ul style="padding-left: 20px">
+      <li *ngFor="let list of list_types" class="list-item" (click)="onSelect(list.filename)">
+        <a> {{ list.name }} </a>
+      </li>
+    </ul>
+  </div>
+  <div class="column right">
+    <div style="margin: auto">
+      <app-loader
+        [isLoading]="isLoading"
+        style="width: 150px; height: 150px; margin-left: 300px; position: absolute"
+        message=""
+      >
+      </app-loader>
+      <div class="d-flex flex-wrap" style="max-width: 600px; margin-top: 30px; text-align: center">
+        <div *ngFor="let product of filtered; index as c" class="item-details section2-box fadeHover" id="section2box3">
+          <div>
+            <div>
+              <!--*ngIf="showDescID == c" -->
+              <a href="{{ product.permalink }}" rel="tag">
+                <div class="overlay">
+                  <div class="overlay-back">
+                    <div class="fadeHover-title">{{ top10List[c].additional_desc }}</div>
+                  </div>
+                </div>
+              </a>
+              <div style="margin: auto; text-align: center; font-weight: bold">No. {{ top10List[c].rank }}</div>
+              <div>
+                <a [href]="product.permalink">
+                  <img
+                    width="290"
+                    height="290"
+                    [src]="product.images[0].src"
+                    class="attachment-full size-full wp-post-image"
+                    alt=""
+                    loading="lazy"
+                    sizes="(max-width: 1200px) 100vw, 1200px"
+                  />
+                </a>
+              </div>
+              <div class="">
+                <div class="item-category">
+                  <a
+                    href="{{ 'https://wclub.rs/' + lang + 'product-category/' + product.categories[1].slug + '/' }}"
+                    rel="tag"
+                    >{{ product.categories[1].name }}</a
+                  >
+                </div>
+                <div class="item-title">
+                  <a class="qodef-woo-product-title-link" href="{{ product.permalink }}"> {{ product.name }} </a>
+                </div>
+                <div class="product-price">{{ formatPrice(product.price) | number: '1.2-2' }} RSD</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

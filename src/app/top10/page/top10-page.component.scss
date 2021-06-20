@@ -1,0 +1,146 @@
+.column {
+  float: left;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 25%;
+}
+
+.right {
+  width: 75%;
+  border-left: rgba(204, 172, 129, 1);
+  height: 100%;
+  min-height: 600px;
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.item-title {
+  font-family: Catamaran, sans-serif;
+  text-transform: uppercase;
+  color: #232323;
+  font-size: 14px;
+  //line-height: 1.42em;
+  font-weight: 700;
+  //letter-spacing: .13em;
+  //margin: 25px 0;
+  //ms-word-wrap: break-word;
+  word-wrap: break-word;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.item-category {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #232323;
+  font-size: 11px;
+  word-wrap: break-word;
+  text-align: center;
+  text-decoration: none !important;
+}
+
+.product-price {
+  text-align: center;
+  font-size: 14px;
+  font-family: Catamaran, sans-serif;
+  font-weight: 700;
+}
+
+.item-details {
+  border-left: rgba(204, 172, 129, 0.35);
+  border-right: rgba(204, 172, 129, 0.35);
+  border-width: 1px;
+  border-style: solid;
+  border-top: none;
+  border-bottom: none;
+  max-width: 290px;
+  min-height: 420px;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.list-item {
+  font-family: Catamaran, sans-serif;
+  text-transform: uppercase;
+  color: #232323;
+  font-size: 14px;
+  font-weight: 700;
+  word-wrap: break-word;
+  text-align: left;
+  :hover {
+    color: rgba(204, 172, 129, 1);
+  }
+}
+
+.list-title {
+  font-family: Catamaran, sans-serif;
+  text-transform: uppercase;
+  color: #232323;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+.section2-box {
+  position: relative;
+}
+.fadeHover {
+  transition: all 0.35s ease;
+  -webkit-transition: all 0.35s ease;
+  transition-delay: 0.1s;
+  -webkit-transition-delay: 0.1s;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.overlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  cursor: pointer;
+}
+
+.overlay-back {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(204, 172, 129, 0);
+  height: 100%;
+  width: 100%;
+}
+.overlay-back:hover {
+  position: absolute;
+  cursor: pointer;
+  background-color: rgba(204, 172, 129, 1);
+  height: 100%;
+  width: 100%;
+}
+
+.fadeHover-title {
+  color: rgba(255, 255, 255, 0);
+}
+
+.fadeHover:hover .fadeHover-title {
+  font-family: Catamaran, sans-serif;
+  text-transform: uppercase;
+  color: white;
+  //text-shadow: 1px 1px #000000;
+  font-size: 14px;
+  font-weight: 700;
+  word-wrap: break-word;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  transform: translate(-25%, -50%);
+}

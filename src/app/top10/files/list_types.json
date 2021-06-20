@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Top 10 ovog leta",
+    "filename": "top10_this_summer"
+  },
+  {
+    "id": "2",
+    "name": "Top 10 Azijskih",
+    "filename": "top10_asian"
+  },
+  {
+    "id": "3",
+    "name": "Najčudnije destilerije",
+    "filename": "weird"
+  }
+]

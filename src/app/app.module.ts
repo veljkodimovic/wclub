@@ -9,10 +9,11 @@ import { CoreModule } from '@core';
 import { SharedModule } from '@shared';
 import { DiscoveryModule } from './discovery/discovery.module';
 import { ShellModule } from './shell/shell.module';
-import { AboutModule } from './about/about.module';
+import { Top10Module } from './top10/top10.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { SwiperModule } from 'swiper/angular';
 
 @NgModule({
   imports: [
@@ -24,8 +25,9 @@ import { NgxUiLoaderModule } from 'ngx-ui-loader';
     CoreModule,
     SharedModule,
     ShellModule,
-    AboutModule,
+    Top10Module,
     DiscoveryModule,
+    SwiperModule,
     NgxUiLoaderModule,
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
