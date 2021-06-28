@@ -15,7 +15,7 @@ import { HttpClient } from '@angular/common/http';
 export class Top10Page implements OnInit {
   version: string | null = environment.version;
   products: any[] | undefined;
-  filtered: any[] | undefined;
+  filtered: any[] = [];
   isLoading = false;
   keywords: any = [];
   currentCount: any;
@@ -23,11 +23,13 @@ export class Top10Page implements OnInit {
   top10List = top10['top10_this_summer'];
   list_types = listTypes;
   showDescID: number;
+  activeDisc: string;
   constructor(private router: Router, private top10Serice: Top10Service, private http: HttpClient) {}
 
   ngOnInit() {
     this.isLoading = true;
     this.showDescID = -1;
+    this.activeDisc = this.list_types[0].description;
     if (this.router.url.indexOf('lang=sr') > -1) {
       this.lang = 'sr/';
     }
@@ -40,8 +42,10 @@ export class Top10Page implements OnInit {
       )
       .subscribe((products: any[]) => {
         this.products = products;
-        this.filtered = this.products.filter((x) => this.top10List.some((y: any) => y.id.includes(x.id)));
-        console.log(this.filtered);
+        this.top10Serice.setProducts(products);
+        this.top10List.forEach((element: any) => {
+          this.filtered.push(this.top10Serice.getProductByID(element.id));
+        });
       });
 
     console.log(this.list_types);
@@ -50,9 +54,13 @@ export class Top10Page implements OnInit {
     return parseFloat(price);
   }
 
-  onSelect(list: string) {
-    this.top10List = top10[list];
-    this.filtered = this.products.filter((x) => this.top10List.some((y: any) => y.id.includes(x.id)));
+  onSelect(list: any) {
+    this.top10List = top10[list.filename];
+    this.activeDisc = list.description;
+    this.filtered = [];
+    this.top10List.forEach((element: any) => {
+      this.filtered.push(this.top10Serice.getProductByID(element.id));
+    });
   }
 
   showDesc(index: number) {

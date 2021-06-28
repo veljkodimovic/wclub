@@ -19,7 +19,7 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 export class Top10Plugin implements OnInit {
   version: string | null = environment.version;
   products: any[] | undefined;
-  filtered: any[] | undefined;
+  filtered: any[] = [];
   isLoading = false;
   keywords: any = [];
   currentCount: any;
@@ -41,8 +41,10 @@ export class Top10Plugin implements OnInit {
       )
       .subscribe((products: any[]) => {
         this.products = products;
-        this.filtered = this.products.filter((x) => this.top10List.some((y: any) => y.id.includes(x.id)));
-        console.log(this.filtered);
+        this.top10Serice.setProducts(products);
+        this.top10List.forEach((element: any) => {
+          this.filtered.push(this.top10Serice.getProductByID(element.id));
+        });
       });
   }
   formatPrice(price: string) {

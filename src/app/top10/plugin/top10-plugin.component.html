@@ -1,58 +1,62 @@
-<app-loader
-  [isLoading]="isLoading"
-  style="width: 150px; height: 150px; margin-left: 50%; margin-top: 100px; position: absolute"
-  message=""
->
-</app-loader>
-<div class="row h-100">
-  <div class="d-flex flex-wrap" style="max-width: 1160px; margin: auto; padding-top: 20px">
-    <swiper
-      [slidesPerView]="5"
-      [spaceBetween]="0"
-      (swiper)="onSwiper($event)"
-      (slideChange)="onSlideChange()"
-      [navigation]="true"
-      [autoplay]="{ delay: 2000 }"
-    >
-      <ng-template swiperSlide *ngFor="let product of filtered; index as c">
-        <div class="item-details">
-          <div>
+<div style="margin-bottom: 50px">
+  <app-loader
+    [isLoading]="isLoading"
+    style="width: 150px; height: 150px; margin-left: 50%; margin-top: 100px; position: absolute"
+    message=""
+  >
+  </app-loader>
+  <div class="row h-100">
+    <div class="d-flex flex-wrap" style="max-width: 1120px; margin: auto; padding-top: 20px">
+      <swiper
+        [slidesPerView]="5"
+        [spaceBetween]="0"
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange()"
+        [navigation]="true"
+        [autoplay]="{ delay: 2000 }"
+      >
+        <ng-template swiperSlide *ngFor="let product of filtered; index as c">
+          <div class="item-details">
             <div>
-              <div style="margin: auto; text-align: center; font-weight: bold">No. {{ top10List[c].rank }}</div>
               <div>
-                <!--<a [href]="product.permalink">-->
-                <a>
-                  <img
-                    width="290"
-                    height="290"
-                    [src]="product.images[0].src"
-                    class="attachment-full size-full wp-post-image"
-                    alt=""
-                    loading="lazy"
-                    sizes="(max-width: 1200px) 100vw, 1200px"
-                  />
-                </a>
-              </div>
-              <div class="">
-                <div class="item-category">
-                  <!--<a href="{{ 'https://wclub.rs/' + lang + 'product-category/' + product.categories[1].slug + '/' }}"
+                <div style="margin: auto; text-align: center; font-weight: bold">No. {{ top10List[c].rank }}</div>
+                <div>
+                  <!--<a [href]="product.permalink">-->
+                  <a href="https://wclub.rs/discovery/top-10/">
+                    <img
+                      width="290"
+                      height="290"
+                      [src]="product.images[0].src"
+                      class="attachment-full size-full wp-post-image"
+                      alt=""
+                      loading="lazy"
+                      sizes="(max-width: 1200px) 100vw, 1200px"
+                    />
+                  </a>
+                </div>
+                <div class="">
+                  <div class="item-category">
+                    <!--<a href="{{ 'https://wclub.rs/' + lang + 'product-category/' + product.categories[1].slug + '/' }}"
                                     rel="tag">{{ product.categories[1].name }}</a>-->
-                </div>
-                <div class="item-title">
-                  <a class="qodef-woo-product-title-link"> {{ product.name }} </a>
-                  <!-- <a class="qodef-woo-product-title-link" href="{{ product.permalink }}"> {{ product.name
+                  </div>
+                  <div class="item-title">
+                    <a class="qodef-woo-product-title-link" href="https://wclub.rs/discovery/top-10/">
+                      {{ product.name }}
+                    </a>
+                    <!-- <a class="qodef-woo-product-title-link" href="https://wclub.rs/discovery/top-10/"> {{ product.name
                                     }} </a>-->
-                </div>
-                <div class="product-price">{{ formatPrice(product.price) | number: '1.2-2' }} RSD</div>
+                  </div>
+                  <div class="product-price">{{ formatPrice(product.price) | number: '1.2-2' }} RSD</div>
 
-                <div style="margin: 10px">
-                  {{ top10List[c].additional_desc }}
+                  <div style="margin: 10px">
+                    {{ top10List[c].additional_desc }}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </ng-template>
-    </swiper>
+        </ng-template>
+      </swiper>
+    </div>
   </div>
 </div>

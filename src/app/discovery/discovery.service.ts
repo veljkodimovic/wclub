@@ -25,7 +25,7 @@ export class DiscoveryService {
     if (this.router.url.indexOf('lang=sr') > -1) {
       route = routes.products_sr();
     } else {
-      route = routes.products_en();
+      route = routes.products_sr();
     }
 
     return this.httpClient.get(route).pipe(

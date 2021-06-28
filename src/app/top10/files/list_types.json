@@ -1,17 +1,14 @@
 [
   {
     "id": "1",
-    "name": "Top 10 ovog leta",
-    "filename": "top10_this_summer"
+    "name": "Šta obavezno probati ovog leta?",
+    "filename": "top10_this_summer",
+    "description": "Za svaku priliku ili period godine postoji idealan viski. Leti po prirodi stvari volimo citrusnije ukuse bogate aromama cveća. Zato na našoj letnoj listi dominiraju viskiji sa ovim notama. Naravno nismo želeli da lude noći ili intima druženja sa prijateljima budu zapostavljena. Ova lista čini leto još boljim."
   },
   {
     "id": "2",
-    "name": "Top 10 Azijskih",
-    "filename": "top10_asian"
-  },
-  {
-    "id": "3",
-    "name": "Najčudnije destilerije",
-    "filename": "weird"
+    "name": "Fascinantna Azija",
+    "filename": "top10_asian",
+    "description": "Uskoro!"
   }
 ]

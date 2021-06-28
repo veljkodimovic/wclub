@@ -1,106 +1,54 @@
 {
   "top10_this_summer": [
     {
-      "id": "6649",
+      "id": "8091",
       "rank": "1",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari. Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari. Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Revival je zapanjujući Highland single malt u kome dominira sladak i kremast ukus sa notama čokolade, meda, šerija i začinjenog hrasta."
     },
     {
-      "id": "6646",
+      "id": "8122",
       "rank": "2",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Očekujte obilni ječam potkrepljen aromom toplog hrasta, zelene jabuke i suvih kajsija sazrevajući do nagoveštaja breskve i meke banane."
     },
     {
-      "id": "6644",
+      "id": "8022",
       "rank": "3",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Viski stvoren od strane 20 brend ambasadora destilerije, a rezultat je vrhunsko izbalansirani viski dubokog i slanog ukusa sa notama pečenog badema i cimeta."
     },
     {
-      "id": "6642",
+      "id": "8098",
       "rank": "4",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Bogato zadimljen, sa osnovnim voćnim i slatkim notama, uz arome treseta i dima. Fantastičan viski za kasnije večernje sate."
     },
     {
-      "id": "6640",
+      "id": "8138",
       "rank": "5",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Akashi je specijalno proizvedena za evropsko tržište koristeći mešavinu malt i grain viskija."
     },
     {
-      "id": "6567",
+      "id": "8053",
       "rank": "6",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Veoma izbalansiranog ukusa, sa citrusnim notama i finim tragovima vanile, uz blagu nadimljenost."
     },
     {
-      "id": "6566",
+      "id": "8094",
       "rank": "7",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Single malt viski koji sazreva najmanje 12 godina u kombinaciji najfinijih špansih buradi Pedro Ximenez i Oloroso šeri."
     },
     {
-      "id": "6565",
+      "id": "8063",
       "rank": "8",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Aromama ovog viskija dominira kombinacija zrelog bobičastog voća, vanile i narandže sa suptilnim notama nadimljenog hrasta i tamne čokolade."
     },
     {
-      "id": "6564",
+      "id": "8074",
       "rank": "9",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Sa notama dimljenog treseta, začinjenog hrasta i iznenađujuće slatkoće, Laphroaig Select je fantastičan uvod u tresetni viski."
     },
     {
-      "id": "6563",
+      "id": "8128",
       "rank": "10",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    }
-  ],
-  "weird": [
-    {
-      "id": "6561",
-      "rank": "1",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari. Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari. Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6560",
-      "rank": "2",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6644",
-      "rank": "3",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6642",
-      "rank": "4",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6640",
-      "rank": "5",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6567",
-      "rank": "6",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6566",
-      "rank": "7",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6565",
-      "rank": "8",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6564",
-      "rank": "9",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
-    },
-    {
-      "id": "6563",
-      "rank": "10",
-      "additional_desc": "Dodatni opisni tekst, neki malo duzi koji zelimo da koristimo kao opciju za pokazivanje stvari"
+      "additional_desc": "Lagan, svetao viski u čijem je središtu obilje slatkoće od vanile – sjajan kao aperitiv."
     }
   ],
   "top10_asian": []

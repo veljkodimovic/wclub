@@ -10,6 +10,8 @@ const routes = {
   products_sr: () => `/products?per_page=100&status=publish&category=187&lang=sr`,
 };
 
+var products: any;
+
 export interface Products {
   category: string;
 }
@@ -25,12 +27,20 @@ export class Top10Service {
     if (this.router.url.indexOf('lang=sr') > -1) {
       route = routes.products_sr();
     } else {
-      route = routes.products_en();
+      route = routes.products_sr();
     }
 
     return this.httpClient.get(route).pipe(
       map((body: any) => body),
-      catchError(() => of('Error, could not load joke :-('))
+      catchError(() => of('Error, could not products'))
     );
+  }
+
+  getProductByID(id: number) {
+    return products.find((x: any) => x.id == id);
+  }
+
+  setProducts(data: any) {
+    products = data;
   }
 }

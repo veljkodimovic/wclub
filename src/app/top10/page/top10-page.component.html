@@ -2,10 +2,13 @@
   <div class="column left">
     <h2 class="list-title">Izbor urednika</h2>
     <ul style="padding-left: 20px">
-      <li *ngFor="let list of list_types" class="list-item" (click)="onSelect(list.filename)">
+      <li *ngFor="let list of list_types" class="list-item" (click)="onSelect(list)">
         <a> {{ list.name }} </a>
       </li>
     </ul>
+    <p class="top10_desc">
+      {{ activeDisc }}
+    </p>
   </div>
   <div class="column right">
     <div style="margin: auto">
