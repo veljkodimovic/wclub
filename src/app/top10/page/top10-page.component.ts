@@ -44,12 +44,14 @@ export class Top10Page implements OnInit {
         this.products = products;
         this.top10Serice.setProducts(products);
         this.top10List.forEach((element: any) => {
-          this.filtered.push(this.top10Serice.getProductByID(element.id));
+          let product = this.top10Serice.getProductByID(element.id);
+          if (product) {
+            this.filtered.push(product);
+          }
         });
       });
-
-    console.log(this.list_types);
   }
+
   formatPrice(price: string) {
     return parseFloat(price);
   }
