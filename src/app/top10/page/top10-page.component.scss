@@ -6,17 +6,29 @@
 
 .left {
   width: 30%;
+  min-width: 300px;
+  height: auto;
 }
 
 .right {
   width: 70%;
-  border-left: rgba(204, 172, 129, 1);
   height: 100%;
   min-height: 600px;
-  border: none;
-  border-left-style: solid;
-  border-left-color: #ccac81;
-  border-left-width: 1px;
+}
+
+@media all and (max-width: 1000px) {
+  .left {
+    width: 100%;
+    height: auto;
+    min-width: 260px;
+  }
+
+  .right {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    min-width: 260px;
+  }
 }
 
 .item-title {

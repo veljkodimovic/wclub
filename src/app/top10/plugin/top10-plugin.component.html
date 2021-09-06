@@ -1,7 +1,7 @@
 <div style="margin-bottom: 50px">
   <app-loader
     [isLoading]="isLoading"
-    style="width: 150px; height: 150px; margin-left: 50%; margin-top: 100px; position: absolute"
+    style="width: 150px; height: 150px; margin-left: 48%; margin-top: 100px; position: absolute"
     message=""
   >
   </app-loader>
@@ -16,7 +16,7 @@
         [autoplay]="{ delay: 2000 }"
       >
         <ng-template swiperSlide *ngFor="let product of filtered; index as c">
-          <div class="item-details">
+          <div class="item-details" style="height: 505px">
             <div>
               <div>
                 <div style="margin: auto; text-align: center; font-weight: bold">No. {{ top10List[c].rank }}</div>
