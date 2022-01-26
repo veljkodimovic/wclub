@@ -2,17 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '@env/environment';
 import { finalize } from 'rxjs/operators';
-import { Top10Service } from '../top10.service';
-import top10 from '../files/top10_data.json';
+import { TopListService } from '../top-list.service';
+import topListData from '../files/top_list_data.json';
 import listTypes from '../files/list_types.json';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-top10-page',
-  templateUrl: './top10-page.component.html',
-  styleUrls: ['./top10-page.component.scss'],
+  selector: 'app-top-list-page',
+  templateUrl: './top-list-page.component.html',
+  styleUrls: ['./top-list-page.component.scss'],
 })
-export class Top10Page implements OnInit {
+export class TopListPage implements OnInit {
   version: string | null = environment.version;
   products: any[] | undefined;
   filtered: any[] = [];
@@ -20,11 +20,11 @@ export class Top10Page implements OnInit {
   keywords: any = [];
   currentCount: any;
   lang: any = '';
-  top10List = top10['top10_this_summer'];
+  topList = topListData['winter_whiskies_2022_part_2'];
   list_types = listTypes;
   showDescID: number;
   activeDisc: string;
-  constructor(private router: Router, private top10Serice: Top10Service, private http: HttpClient) {}
+  constructor(private router: Router, private topListService: TopListService, private http: HttpClient) {}
 
   ngOnInit() {
     this.isLoading = true;
@@ -33,7 +33,7 @@ export class Top10Page implements OnInit {
     if (this.router.url.indexOf('lang=sr') > -1) {
       this.lang = 'sr/';
     }
-    this.top10Serice
+    this.topListService
       .getProducts()
       .pipe(
         finalize(() => {
@@ -42,9 +42,9 @@ export class Top10Page implements OnInit {
       )
       .subscribe((products: any[]) => {
         this.products = products;
-        this.top10Serice.setProducts(products);
-        this.top10List.forEach((element: any) => {
-          let product = this.top10Serice.getProductByID(element.id);
+        this.topListService.setProducts(products);
+        this.topList.forEach((element: any) => {
+          let product = this.topListService.getProductByID(element.id);
           if (product) {
             this.filtered.push(product);
           }
@@ -57,11 +57,14 @@ export class Top10Page implements OnInit {
   }
 
   onSelect(list: any) {
-    this.top10List = top10[list.filename];
+    this.topList = topListData[list.filename];
     this.activeDisc = list.description;
     this.filtered = [];
-    this.top10List.forEach((element: any) => {
-      this.filtered.push(this.top10Serice.getProductByID(element.id));
+    this.topList.forEach((element: any) => {
+      let product = this.topListService.getProductByID(element.id);
+      if (product) {
+        this.filtered.push(product);
+      }
     });
   }
 

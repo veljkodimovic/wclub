@@ -19,10 +19,10 @@
           <div class="item-details" style="height: 505px">
             <div>
               <div>
-                <div style="margin: auto; text-align: center; font-weight: bold">No. {{ top10List[c].rank }}</div>
+                <div style="margin: auto; text-align: center; font-weight: bold">No. {{ topList[c].rank }}</div>
                 <div>
                   <!--<a [href]="product.permalink">-->
-                  <a href="https://wclub.rs/discovery/top-10/">
+                  <a href="https://wclub.rs/discovery/top-list/">
                     <img
                       width="290"
                       height="290"
@@ -40,16 +40,16 @@
                                     rel="tag">{{ product.categories[1].name }}</a>-->
                   </div>
                   <div class="item-title">
-                    <a class="qodef-woo-product-title-link" href="https://wclub.rs/discovery/top-10/">
+                    <a class="qodef-woo-product-title-link" href="https://wclub.rs/discovery/top-list/">
                       {{ product.name }}
                     </a>
-                    <!-- <a class="qodef-woo-product-title-link" href="https://wclub.rs/discovery/top-10/"> {{ product.name
+                    <!-- <a class="qodef-woo-product-title-link" href="https://wclub.rs/discovery/top-list/"> {{ product.name
                                     }} </a>-->
                   </div>
                   <div class="product-price">{{ formatPrice(product.price) | number: '1.2-2' }} RSD</div>
 
                   <div style="margin: 10px">
-                    {{ top10List[c].additional_desc }}
+                    {{ topList[c].additional_desc }}
                   </div>
                 </div>
               </div>

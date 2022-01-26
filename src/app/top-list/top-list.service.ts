@@ -19,7 +19,7 @@ export interface Products {
 @Injectable({
   providedIn: 'root',
 })
-export class Top10Service {
+export class TopListService {
   constructor(private httpClient: HttpClient, private router: Router) {}
 
   getProducts() {

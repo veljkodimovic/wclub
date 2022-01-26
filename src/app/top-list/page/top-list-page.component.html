@@ -6,7 +6,7 @@
         <a> {{ list.name }} </a>
       </li>
     </ul>
-    <p class="top10_desc">
+    <p class="top-list-desc">
       {{ activeDisc }}
     </p>
   </div>
@@ -26,11 +26,11 @@
               <a href="{{ product.permalink }}" rel="tag">
                 <div class="overlay">
                   <div class="overlay-back">
-                    <div class="fadeHover-title">{{ top10List[c].additional_desc }}</div>
+                    <div class="fadeHover-title">{{ topList[c].additional_desc }}</div>
                   </div>
                 </div>
               </a>
-              <div style="margin: auto; text-align: center; font-weight: bold">No. {{ top10List[c].rank }}</div>
+              <div style="margin: auto; text-align: center; font-weight: bold">No. {{ topList[c].rank }}</div>
               <div>
                 <a [href]="product.permalink">
                   <img

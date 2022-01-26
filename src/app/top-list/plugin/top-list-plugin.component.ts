@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from '@env/environment';
 import { finalize } from 'rxjs/operators';
-import { Top10Service } from '../top10.service';
-import top10 from '../files/top10_data.json';
+import { TopListService } from '../top-list.service';
+import topListData from '../files/top_list_data.json';
 
 // import Swiper core and required modules
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/core';
@@ -12,11 +12,11 @@ import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 's
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Autoplay]);
 
 @Component({
-  selector: 'app-top10-plugin',
-  templateUrl: './top10-plugin.component.html',
-  styleUrls: ['./top10-plugin.component.scss'],
+  selector: 'app-top-list-plugin',
+  templateUrl: './top-list-plugin.component.html',
+  styleUrls: ['./top-list-plugin.component.scss'],
 })
-export class Top10Plugin implements OnInit {
+export class TopListPlugin implements OnInit {
   version: string | null = environment.version;
   products: any[] | undefined;
   filtered: any[] = [];
@@ -24,15 +24,15 @@ export class Top10Plugin implements OnInit {
   keywords: any = [];
   currentCount: any;
   lang: any = '';
-  top10List = top10['top10_this_summer'];
-  constructor(private router: Router, private top10Serice: Top10Service) {}
+  topList = topListData['winter_whiskies_2022_part_2'];
+  constructor(private router: Router, private topListSerice: TopListService) {}
 
   ngOnInit() {
     this.isLoading = true;
     if (this.router.url.indexOf('lang=sr') > -1) {
       this.lang = 'sr/';
     }
-    this.top10Serice
+    this.topListSerice
       .getProducts()
       .pipe(
         finalize(() => {
@@ -41,9 +41,9 @@ export class Top10Plugin implements OnInit {
       )
       .subscribe((products: any[]) => {
         this.products = products;
-        this.top10Serice.setProducts(products);
-        this.top10List.forEach((element: any) => {
-          let product = this.top10Serice.getProductByID(element.id);
+        this.topListSerice.setProducts(products);
+        this.topList.forEach((element: any) => {
+          let product = this.topListSerice.getProductByID(element.id);
           if (product) {
             this.filtered.push(product);
           }

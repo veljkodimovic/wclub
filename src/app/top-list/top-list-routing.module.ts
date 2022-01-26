@@ -3,13 +3,13 @@ import { Routes, RouterModule } from '@angular/router';
 import { marker } from '@biesbjerg/ngx-translate-extract-marker';
 
 import { Shell } from '@app/shell/shell.service';
-import { Top10Plugin } from './plugin/top10-plugin.component';
-import { Top10Page } from './page/top10-page.component';
+import { TopListPlugin } from './plugin/top-list-plugin.component';
+import { TopListPage } from './page/top-list-page.component';
 
 const routes: Routes = [
   Shell.childRoutes([
-    { path: 'plugin', component: Top10Plugin, data: { title: marker('Top 10') } },
-    { path: 'top10', component: Top10Page, data: { title: marker('Top 10') } },
+    { path: 'plugin', component: TopListPlugin, data: { title: marker('Top List') } },
+    { path: 'top10', component: TopListPage, data: { title: marker('Top List') } },
   ]),
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
   exports: [RouterModule],
   providers: [],
 })
-export class Top10RoutingModule {}
+export class TopListRoutingModule {}

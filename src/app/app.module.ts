@@ -9,7 +9,7 @@ import { CoreModule } from '@core';
 import { SharedModule } from '@shared';
 import { DiscoveryModule } from './discovery/discovery.module';
 import { ShellModule } from './shell/shell.module';
-import { Top10Module } from './top10/top10.module';
+import { TopListModule } from './top-list/top-list.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
@@ -25,7 +25,7 @@ import { SwiperModule } from 'swiper/angular';
     CoreModule,
     SharedModule,
     ShellModule,
-    Top10Module,
+    TopListModule,
     DiscoveryModule,
     SwiperModule,
     NgxUiLoaderModule,
